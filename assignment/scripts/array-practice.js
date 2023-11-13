@@ -11,6 +11,8 @@ console.log('Animals are: ', animalArray);
 //    Be sure to console.log your array of foods to the console with
 //    a message, similar to the example above.
 
+let favoriteFoods = ['Vietnamese', 'Thai', 'Italian']
+console.log('My Favorite Foods are: ', favoriteFoods);
 
 // Array.length: A property that tells you how many items are in a given array.
 console.log('--- 2. Length of an array ---');
@@ -23,6 +25,8 @@ console.log('Number of animals:', numberOfAnimals);
 //    to assign it the number value of how many items are inside `favoriteFoods`.
 //    Don't forget to console.log `numberOfFoods` to make sure your code worked!
 
+let numberOfFoods = favoriteFoods.length;
+console.log('Number of Favorite Foods:', numberOfFoods);
 
 // Accessing array items
 console.log('--- 3. Accessing items in an array ---');
@@ -36,6 +40,9 @@ console.log('First animal is', firstAnimal);
 //      Be sure to console.log this new variable to make sure your code
 //      worked as expected.
 
+let secondAnimal = animalArray[1];
+console.log('Second animal is ', secondAnimal);
+
 
 // 3.b. TODO: Create a variable `lastAnimal` and assign it the value of
 //      the "last" item in `animalArray`, using its array index.
@@ -43,8 +50,18 @@ console.log('First animal is', firstAnimal);
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
 
+let lastAnimal = animalArray[animalArray.length - 1];
+
+console.log('Animal Array', animalArray);
+console.log('Last Animal', lastAnimal);
+
+// let lastAnimal = animalArray[animalArray - 1];
+// let lastAnimal = (animalArray[animalArray.length-1]);
+// console.log('Last animal is: ', lastAnimal);
+
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
+
 
 
 
@@ -61,6 +78,9 @@ console.log('Added an animal to end,', animalArray);
 //      Similar to above, add the `dessert` to the end of your `favoriteFoods`
 //      array. (How can you be 100% certain this worked? 🤔)
 
+let dessert = 'pandan roll';
+favoriteFoods.push(dessert);
+console.log('Added dessert to end of favorite foods,', favoriteFoods);
 
 // Example: Add to the beginning of an array using the Array.unshift method.
 let animalToUnshift = 'walrus';
@@ -71,9 +91,15 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 //      an entree that you enjoy.
 //      Add the `entree` to the beginning of your `favoriteFoods` array.
 
+let entree = 'curry'
+favoriteFoods.unshift(entree);
+console.log('Added food to beginning of favorite foods', favoriteFoods);
 
 // Example: Remove the last animal by using the Array.pop method.
+console.log(animalArray);
+
 let removedAnimal = animalArray.pop();
+
 console.log('Removed the last animal', removedAnimal);
 console.log('The animals are now', animalArray);
 
@@ -86,18 +112,21 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 //      Don't forget! Use console.log to verify that the `colors`
 //      array only contains three items now, AND to verify that `lastColor`
 //      contains the value "teal".)
-
-
 // Example: Remove the first animal using the Array.shift method.
-removedAnimal = animalArray.shift();
-console.log('Removed the first animal', removedAnimal);
-console.log('The animals are now', animalArray);
+console.log(colors);
+lastColor = colors.pop();
+console.log('Removed the last color', lastColor);
+console.log('The colors are now', colors);
+
 
 // 4.d. TODO: Remove the first value from the `colors` array and store it
 //      inside a new variable called `firstColor`.
-//      To verify that your code worked, console.log `firstColor`!  
+//      To verify that your code worked, console.log `firstColor`!
 
-
+firstColor = colors.shift();
+const storedColor = firstColor;
+console.log('Removed first color', colors);
+console.log('Stored Color', storedColor);
 
 
 // STRETCH GOALS:
